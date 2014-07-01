@@ -408,7 +408,6 @@ module.exports = function (idProperty, getEngine, beforeCallback, afterCallback)
             var newObject = { b: 2 }
             newObject[idProperty] = objects[0][idProperty]
             engine.update(newObject, true, function (error, savedObject) {
-              console.log(typeof savedObject[idProperty])
               savedObject[idProperty].should.be.type('string')
               done()
             })
